@@ -20,6 +20,7 @@ describe('istance', () => {
         assert.equal(obj.b, 2);
         assert.isUndefined(obj.d);
     });
+    
     it('passes constructor call check', () => {
         function Foo(a, b, c, d) {
             if (!(this instanceof Foo)) {
