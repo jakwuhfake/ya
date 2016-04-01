@@ -25,6 +25,7 @@ describe('events', () => {
         expect(triggers).to.equal(1);
     });
     it('lets detach a handler', () => {
+        triggers = [];
         function cb() { triggers.push(2) };
         bus.on('test', () => { triggers.push(1) });
         bus.on('test', cb);
